@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.darothub.dashboard.ui.DashboardFragment"
+        android:label="dashboard">
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="myApp://dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.darothub.home.ui.HomeFragment"
+        android:label="dashboard">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="myApp://home" />
+    </fragment>
+
+<!--    <include app:graph="@navigation/home_nav_graph">-->
+<!--        <action-->
+<!--            android:id="@+id/action_global_dashboard_nav_graph"-->
+<!--            app:destination="@id/dashboard_nav_graph"-->
+<!--            app:enterAnim="@anim/fragment_close_enter"-->
+<!--            app:exitAnim="@anim/fragment_close_exit"-->
+<!--            app:popEnterAnim="@anim/fragment_open_enter"-->
+<!--            app:popExitAnim="@anim/fragment_open_exit" />-->
+<!--    </include>-->
+<!--    <include app:graph="@navigation/dashboard_nav_graph"/>-->
+
+</navigation>
