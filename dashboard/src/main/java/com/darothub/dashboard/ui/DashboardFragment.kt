@@ -41,7 +41,7 @@ class DashboardFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        (requireActivity() as Navigator).addHomeGraph(R.navigation.dashboard_nav_graph)
+
     }
 
     companion object {

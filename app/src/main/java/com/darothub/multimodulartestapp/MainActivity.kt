@@ -20,11 +20,15 @@ class MainActivity() : AppCompatActivity(), Navigator {
     }
 
     override fun goto(destination: Int) {
+        //Using fragmentId
         navController.navigate(destination)
 
     }
 
     override fun goto(uri: Uri) {
+        //Using uri directly
+        navController.navigate(uri)
+        //or using NavDeepLinkRequest
         val request = NavDeepLinkRequest.Builder
             .fromUri(uri)
             .build()
